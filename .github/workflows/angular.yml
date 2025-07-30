@@ -26,7 +26,10 @@ jobs:
       run: npm run test -- --watch=false --browsers=ChromeHeadless
 
     - name: Build Angular app
-      run: npm run build -- --configuration production
+      run: npm run build -- --configuration production --base-href /ci-cd-demo/
+
+    - name: Copy index.html to 404.html
+      run: cp dist/angular-cicd-demo/index.html dist/angular-cicd-demo/404.html
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
