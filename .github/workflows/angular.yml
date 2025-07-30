@@ -33,3 +33,8 @@ jobs:
       with:
         branch: gh-pages
         folder: dist/angular-cicd-demo
+        token: ${{ secrets.REPO_TOKEN }}
+
+      with:
+        branch: gh-pages
+        folder: dist/angular-cicd-demo
