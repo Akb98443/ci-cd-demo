@@ -20,10 +20,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('angular-cicd-demo');
   });
 
-  it('should render title', () => {
+  it('should render the demo heading', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-cicd-demo app is running!');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello This is just demo');
   });
 });
